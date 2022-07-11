@@ -20,6 +20,7 @@ const App = () => {
         const data = await response.json();
 
         setMovies(data.Search);
+        console.log(data.Search);
     }
 
     useEffect(() => {
@@ -40,9 +41,9 @@ const App = () => {
             {
                 movies?.length > 0 ? (
                     <div className="container">
-                     {movies.map((movie)=>(
-                        <MovieCard movie={movie}/>
-                     ))}
+                        {movies.map((movie) => (
+                            <MovieCard movie={movie} />
+                        ))}
                     </div>
                 ) : (
                     <div className="empty">
